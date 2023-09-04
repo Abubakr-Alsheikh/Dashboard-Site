@@ -465,6 +465,248 @@ ul {
 }
 /* end social media stats */
 
+/* start projects table */
+.projects .responsive-table{
+  overflow-x: auto;
+}
+.projects table{
+  min-width: 1000px;
+  border-spacing: 0;
+}
+.projects table td{
+  padding: 15px;
+}
+.projects thead td{
+  background-color: #eee;
+  font-weight: bold;
+}
+.projects tbody tr td{
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+.projects tbody tr td:last-child{
+  border-right: 1px solid #eee;
+}
+.projects tbody tr:hover td{
+  background-color: #EFEFEF;
+}
+.projects table img{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: white;
+}
+.projects table img:not(:first-child){
+  margin-left: -20px;
+}
+/* end projects table */
+
+/* start settings */
+.settings-page{
+  grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+}
+@media (max-width:767px) {
+  .settings-page{
+    grid-template-columns: minmax(100px,1fr);
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+.settings-page .close-message{
+  resize: none;
+  min-height: 150px;
+}
+.toggle-checkbox{
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.toggle-switch{
+  background-color: #ccc;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.toggle-switch::before{
+  font-family: var(--fa-style-family-classic);
+  content: '\f00d';
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;  
+  transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch{
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before{
+  content: '\f00c';
+  left: 50px;
+}
+.setting-box #Email{
+  display: inline-flex;
+  width: calc(100% - 80px);
+}
+.setting-box .soc-box i{
+  width: 40px;
+  height: 40px;
+  background: #f8f8f8;
+  border: 1px solid #999;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  transition: 0.3s;
+}
+.setting-box > .soc-box:focus-within i{
+  color: black;
+}
+.setting-box .soc-box input{
+  height: 40px;
+  background: #f8f8f8;
+  border: 1px solid #999;
+  border-radius: 0 6px 6px 0;
+  padding-left: 10px;
+}
+.setting-box :disabled{
+  color: #aaa;
+  background-color: #DDD;
+  cursor: no-drop;
+}
+.widgets-control .control input{
+  appearance: none;
+  display: none;
+}
+.widgets-control .control label{
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.widgets-control .control label::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--gray-color);
+  margin-top: -9px;
+  border-radius: 4px;
+}
+.widgets-control .control label::after{
+  content: '\f00c';
+  font-family: var(--fa-style-family-classic);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: var(--blue-color);
+  color: white;
+  margin-top: -9px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.2s;
+}
+.widgets-control .control input:checked + label::after{
+  transform: scale(1) rotate(0);
+}
+.backup-manager input[type="radio"]{
+  appearance: none;
+  display: none;
+}
+.backup-manager .control label{
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.backup-manager .control label::before{
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #777;
+  left: 0;
+  top: 50%;
+  margin-top: -11px;
+  border-radius: 50%;
+}
+.backup-manager .control label::after{
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: blue;
+  left: 4px;
+  top: 4px;
+  margin-top: -2px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.backup-manager .control input:checked + label::before{
+  border-color: var(--blue-color);
+}
+.backup-manager .control input:checked + label::after{
+  background: var(--blue-color);
+  transform: scale(1);
+}
+@media (max-width:767px) {
+  .backup-manager .services{
+    flex-wrap: wrap;
+  }
+}
+.backup-manager .services input[type="radio"]:checked + .server{
+  border-color: var(--blue-color);
+}
+/* end settings */
+/* start profile */
+@media (max-width:767px) {
+  .profile-page .overview{
+    flex-direction: column;
+  }
+}
+.profile-page .avatar-box{
+  width: 300px;
+}
+@media (min-width:767px) {
+.profile-page .avatar-box{
+  border-right: 2px solid #ccc;
+}
+}
+.profile-page .avatar-box img{
+  width: 100px;
+}
+.profile-page .avatar-box .level{
+  height: 6px;
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+.profile-page .avatar-box .level span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--blue-color);
+  border-radius: 6px;
+}
+/* end profile */
 /* start animation */
 @keyframes change-color {
   from{
