@@ -85,10 +85,6 @@ ul {
   margin-left: 20px;
   transition: 0.1s;
 }
-.sidebar ul li a:hover span,
-.sidebar ul li a.active span {
-  transform: translateX(25%);
-}
 @media (max-width: 767px) {
   .sidebar {
     width: 80px;
@@ -854,6 +850,7 @@ ul {
 
 .courses-page .course .cover{
   width: 100%;
+  height: 300px;
 }
 .courses-page .course .instructor{
   position: absolute;
